@@ -1,7 +1,5 @@
 html {
     font-family: 'Orbitron', sans-serif;
-    height: 100vh;
-    min-height: 100vh;
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-size: 175%;
@@ -10,6 +8,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    height: auto;
     min-height: 100vmin;
     display: flex;
     align-items: center;
@@ -22,7 +21,7 @@ body {
 }
 
 #container {
-    height:fit-content;
+    height:auto;
     vertical-align: middle;
     display: inline-block;
     align-items: center;
@@ -76,11 +75,16 @@ body {
     font-size: 75%;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    min-height: 35px;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 #botDisplay {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 #equals {

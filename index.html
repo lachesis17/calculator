@@ -1,43 +1,39 @@
 <!DOCTYPE html>
-<link href="styles/style.css" rel="stylesheet">
-<script src="scripts/main.js" defer></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-<link rel="shortcut icon" href="images/Favicon.ico" type="image/x-icon">
-
 <html>
   <head>
     <title>Calculator</title>
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="styles/style.css" rel="stylesheet">
+      <script src="scripts/main.js" defer></script>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+      <link rel="shortcut icon" href="images/Favicon.ico" type="image/x-icon">
   </head>
     <body>
       <div id="container">
-        <div id="topDisplay" class="display">0
+        <div id="topDisplay" class="display">
         </div>
-        <div id="botDisplay" class="display">0
-        </div>
+        <div id="botDisplay" class="display">0</div>
           <div id="keyContainer">
-            <button id="add" class="keys">+</button>
-            <button id="subtract" class="keys">-</button>
-            <button id="multiply" class="keys">x</button>
-            <button id="divide" class="keys">÷</button>
-            <button id="_9" class="keys">7</button>
+            <button id="add" class="keys" data-action="add">+</button>
+            <button id="subtract" class="keys" data-action="subtract">-</button>
+            <button id="multiply" class="keys" data-action="multiply">x</button>
+            <button id="divide" class="keys" data-action="divide">÷</button>
+            <button id="_7" class="keys">7</button>
             <button id="_8" class="keys">8</button>
-            <button id="_7" class="keys">9</button>
-            <button id="equals" class="keys">=</button>
-            <button id="_5" class="keys">4</button>
-            <button id="_4" class="keys">5</button>
-            <button id="_3" class="keys">6</button>
-            
+            <button id="_9" class="keys">9</button>
+            <button id="equals" class="keys" data-action="equals">=</button>
+            <button id="_4" class="keys">4</button>
+            <button id="_5" class="keys">5</button>
+            <button id="_6" class="keys">6</button>
             <button id="_1" class="keys">1</button>
-            <button id="_0" class="keys">2</button>
+            <button id="_2" class="keys">2</button>
             <button id="_3" class="keys">3</button>
-            
             <button id="_0" class="keys">0</button>
-            <button id="decimal" class="keys">.</button>
-            <button id="AC" class="keys">AC</button>
+            <button id="decimal" class="keys" data-action="decimal">.</button>
+            <button id="AC" class="keys" data-action="clear">AC</button>
           </div>
       </div>
     <body>
 </html>
-    
