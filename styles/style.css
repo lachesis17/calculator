@@ -4,6 +4,7 @@ html {
     min-height: 100vh;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-size: 175%;
 }
 
 body {
@@ -23,27 +24,40 @@ body {
     align-items: center;
     justify-content: center;
     margin: auto;
+    margin-top: 10%;
     text-align: center;
-    border: 1px solid;
+    border: 2px solid;
     background-color: rgb(219, 216, 216);
     border-radius: 12px;
-    box-shadow: 0px 0px 4px #222;
+    box-shadow: 0px 0px 6px #000;
+    padding: 4px;
 }
 
-#keys {
-    display: -ms-grid;
+#keyContainer {
     display: grid;
-    grid-gap: 4px;
-    -ms-grid-columns: 1fr 4px 1fr 4px 1fr 4px 1fr;
+    grid-gap: 2px;
     grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: 35px 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr;
-    grid-template-rows: 35px repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     margin: none;
-    padding: 4px;
+    padding: 2px;
     background-color: lightgrey;
     color: #222222;
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
+}
+
+.keys {
+    display: flex;
+    font-family: 'Orbitron', sans-serif;
+    background-color: lightgrey;
+    color: #222222;
+    border-radius: 6px;
+    font-size: 200%;
+    outline: none;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    text-shadow: 0px 0px 1px #000;
 }
 
 .display {
@@ -51,10 +65,11 @@ body {
     padding: 6px;
     background-color: #222222;
     color: #f0f0f0;
+    font-size: 225%;
 }
 
 #topDisplay {
-    font-size: 50%;
+    font-size: 75%;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
@@ -62,4 +77,18 @@ body {
 #botDisplay {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+}
+
+#equals {
+    grid-column: -2;
+    grid-row: 2 / span 4;
+    padding-top: 100%;
+    background-color: #444444;
+    color: #f0f0f0;
+}
+
+#AC, #decimal, #multiply, #divide, #add, #subtract {
+    background-color: #444444;
+    color: #f0f0f0;
+    text-shadow: 0px 0px 1px #000;
 }
