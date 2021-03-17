@@ -26,8 +26,40 @@ body {
     text-align: center;
     border: 1px solid;
     background-color: rgb(219, 216, 216);
+    border-radius: 12px;
+    box-shadow: 0px 0px 4px #222;
 }
 
 #keys {
+    display: -ms-grid;
     display: grid;
+    grid-gap: 4px;
+    -ms-grid-columns: 1fr 4px 1fr 4px 1fr 4px 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: 35px 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr;
+    grid-template-rows: 35px repeat(6, 1fr);
+    margin: none;
+    padding: 4px;
+    background-color: lightgrey;
+    color: #222222;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.display {
+    text-align: right;
+    padding: 6px;
+    background-color: #222222;
+    color: #f0f0f0;
+}
+
+#topDisplay {
+    font-size: 50%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+#botDisplay {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
