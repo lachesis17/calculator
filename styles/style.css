@@ -7,19 +7,27 @@ html {
 }
 
 body {
-    height: max-content;
+    min-height: 100vmin;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+    background-color: gray;
 }
 
 #container {
     height:fit-content;
+    vertical-align: middle;
     display: inline-block;
-    align-items: center;
     align-items: center;
     justify-content: center;
     margin: auto;
     text-align: center;
+    border: 1px solid;
+    background-color: rgb(219, 216, 216);
+}
+
+#keys {
+    display: grid;
 }
