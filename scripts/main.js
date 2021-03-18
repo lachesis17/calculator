@@ -45,16 +45,17 @@ let firstNum = '';
                             console.log(secondNum);
                             topDisplay.textContent = `${firstNum}`;
                             botDisplay.textContent = 0;
-                        } else if (secondNum === '') {
-                        operation = key.id;
-                        secondNum = parseFloat(calculate(displayNum, firstNum, operation));
-                        console.log(secondNum);
-                        topDisplay.textContent = `${secondNum}`;
-                        botDisplay.textContent = 0;
-                        console.log(operation);
-                        } else {
-
-                        }
+                            } 
+                            else if (secondNum === '') {
+                                secondNum = parseFloat(calculate(displayNum, firstNum, operation));
+                                console.log(secondNum);
+                                topDisplay.textContent = `${secondNum}`;
+                                botDisplay.textContent = 0;
+                                console.log(operation);
+                                } 
+                                else {
+                                    // wtf am i doing
+                                }
                     };
                     if (key.id === 'equals') {
                         firstNum = parseFloat(botDisplay.textContent);
