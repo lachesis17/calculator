@@ -1,9 +1,8 @@
-let activeSum = 0;
-let storedSum = 0;
-let result = 0;
-let operation = null;
 let buts = document.querySelectorAll('button');
 let keys = document.querySelectorAll('.keys');
+let operation = null;
+let secondNum = '';
+let firstNum = '';
 
     buts.forEach(but =>{
         but.addEventListener('click', e => {
@@ -12,36 +11,59 @@ let keys = document.querySelectorAll('.keys');
             const keyContent = key.textContent;
             let botDisplay = document.getElementById('botDisplay');
             let topDisplay = document.getElementById('topDisplay');
-            const displayedNum = botDisplay.textContent;
+            const displayNum = botDisplay.textContent;
                 if (key.matches('button')) {
                     if (!action) {
-                        if (displayedNum === '0') {
+                        if (displayNum === '0') {
                           botDisplay.textContent = keyContent;
-                        } else {
-                          botDisplay.textContent = displayedNum + keyContent;
-                          activeSum = parseFloat(botDisplay.textContent);
+                        } 
+                        else {
+                          botDisplay.textContent = displayNum + keyContent;
                         }
                       } 
-                        if (displayedNum.length >= 9 && !action) {
-                          botDisplay.textContent = displayedNum;
+                        if (displayNum.length >= 9 && !action) {
+                          botDisplay.textContent = displayNum;
                         }
                     if (action === "clear") {
                         botDisplay.textContent = 0;
                         topDisplay.textContent = 0;
-                        storedSum = 0;
+                        firstNum = '';
+                        secondNum = '';
                     } if (action === 'decimal') {
                         if (botDisplay.textContent.includes(".")) {
-                            botDisplay.textContent = displayedNum;
-                        } else {
-                        botDisplay.textContent = displayedNum + '.';
+                            botDisplay.textContent = displayNum;
+                        } 
+                        else {
+                        botDisplay.textContent = displayNum + '.';
                         }
-                    } if (key.id == 'add' || e.target.id == 'subtract' || e.target.id == 'multiply' || e.target.id == 'divide') {
-                        operation = key.id;
-                        console.log(operation);
                     } 
-    };
-});
-    
+                  else if (key.id == 'add' || key.id == 'subtract' || key.id == 'multiply' || key.id == 'divide') {
+                        operation = key.id;
+                        if (firstNum === '') {
+                            firstNum = parseFloat(botDisplay.textContent);
+                            console.log(firstNum);
+                            console.log(secondNum);
+                            topDisplay.textContent = `${firstNum}`;
+                            botDisplay.textContent = 0;
+                        } else if (secondNum === '') {
+                        operation = key.id;
+                        secondNum = parseFloat(calculate(displayNum, firstNum, operation));
+                        console.log(secondNum);
+                        topDisplay.textContent = `${secondNum}`;
+                        botDisplay.textContent = 0;
+                        console.log(operation);
+                        } else {
+
+                        }
+                    };
+                    if (key.id === 'equals') {
+                        firstNum = parseFloat(botDisplay.textContent);
+                        secondNum = parseFloat(topDisplay.textContent);
+                        result = calculate(firstNum, secondNum, operation);
+                        botDisplay.textContent = `${result}`;
+                        topDisplay.textContent = 0;
+                    }
+                }});
 });
 
     function add (a,b) {
@@ -49,7 +71,7 @@ let keys = document.querySelectorAll('.keys');
     }
 
     function subtract (a,b) {
-        return parseFloat(a) - parseFloat(b);
+        return parseFloat(b) - parseFloat(a);
     }
 
     function multiply (a,b) {
@@ -57,20 +79,22 @@ let keys = document.querySelectorAll('.keys');
     }
 
     function divide (a,b) {
-        return parseFloat(a) / parseFloat(b);
+        return parseFloat(b) / parseFloat(a);
     }
 
     function calculate(a,b,operation){
-        if(operation == 'add'){
-            return add(a,b);
+        let result = '';
+        if (operation === 'add'){
+            result = add(a,b);
         }
-        else if(operation == 'subtract'){
-            return subtract(a,b);
+        else if (operation === 'subtract'){
+            result = subtract(a,b);
         }
-        else if(operation == 'multiply'){
-            return multiply(a,b);
+        else if (operation === 'multiply'){
+            result = multiply(a,b);
+        } 
+        else if (operation === 'divide'){
+            result = divide(a,b);
         }
-        else if(operation == 'divide'){
-            return divide(a,b);
-        }
+        return result;
     }
