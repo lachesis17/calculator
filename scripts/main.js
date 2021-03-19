@@ -65,6 +65,7 @@ let firstNum = '';
                         botDisplay.textContent = `${result}`;
                         topDisplay.textContent = 0;
                         firstNum = '';
+                        secondNum = `${result}`;
                     }
                 }});
 });
