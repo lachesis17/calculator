@@ -34,8 +34,8 @@ body {
     border-radius: 12px;
     box-shadow: 0px 0px 6px #000;
     padding: 4px;
-    min-width: 450px;
-    max-width: 450px;
+    min-width: 375px;
+    max-width: 375px;
 }
 
 #keyContainer {
@@ -73,6 +73,7 @@ body {
     background-color: #222222;
     color: #f0f0f0;
     font-size: 200%;
+    min-height: 67px;
 }
 
 #topDisplay {

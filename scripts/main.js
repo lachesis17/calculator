@@ -11,6 +11,7 @@ let firstNum = '';
             let botDisplay = document.getElementById('botDisplay');
             let topDisplay = document.getElementById('topDisplay');
             const displayNum = botDisplay.textContent;
+            document.getElementById('botDisplay').style.cssText = "font-size:200%;";
                 if (key.matches('button')) {
                     if (!action) {
                         if (displayNum === '0') {
@@ -39,7 +40,7 @@ let firstNum = '';
                             }
                         }
                         else if (botDisplay.textContent === "DONT / 0") {
-                            botDisplay.textContent = 0;
+                                botDisplay.textContent = 0;
                         }
                         else {
                             x = botDisplay.textContent.toString();
@@ -85,7 +86,8 @@ let firstNum = '';
                     if (key.id === 'equals') {
                         if (operation === null) {
                             botDisplay.textContent = displayNum;
-                        } else {
+                        } 
+                        else {
                         firstNum = parseFloat(botDisplay.textContent);
                         secondNum = parseFloat(topDisplay.textContent);
                         result = calculate(firstNum, secondNum, operation);
@@ -110,10 +112,11 @@ let firstNum = '';
                             firstNum = '';
                             secondNum = `${result}`;
                             operation = null;
+                            document.getElementById('botDisplay').style.cssText = "font-size:165%;";
                         }
                     }
-                    }
-                }});
+                }
+            }});
 });
 
     function add (a,b) {
