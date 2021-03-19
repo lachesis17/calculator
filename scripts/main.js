@@ -1,5 +1,4 @@
 let buts = document.querySelectorAll('button');
-let keys = document.querySelectorAll('.keys');
 let operation = null;
 let secondNum = '';
 let firstNum = '';
@@ -24,12 +23,35 @@ let firstNum = '';
                         if (displayNum.length >= 9 && !action) {
                           botDisplay.textContent = displayNum;
                         }
-                    if (action === "clear") {
+                    if (action === 'clear') {
                         botDisplay.textContent = 0;
                         topDisplay.textContent = 0;
                         firstNum = '';
                         secondNum = '';
-                    } if (action === 'decimal') {
+                        result = '';
+                        operation = null;
+                    } 
+                    if(action === 'del'){
+                        if(displayNum === 0){
+                            botDisplay.textContent = displayNum;
+                            if (x.length <= 0) {
+                                botDisplay.textContent = 0;
+                            }
+                        }
+                        else if (botDisplay.textContent === "DONT / 0") {
+                            botDisplay.textContent = 0;
+                        }
+                        else {
+                            x = botDisplay.textContent.toString();
+                            x = x.slice(0,-1);
+                            botDisplay.textContent = Number(x);
+                            secondNum = Number(x);
+                            if (x.length <= 0) {
+                                botDisplay.textContent = 0;
+                            }
+                        }
+                    }
+                    if (action === 'decimal') {
                         if (botDisplay.textContent.includes(".")) {
                             botDisplay.textContent = displayNum;
                         } 
@@ -38,7 +60,7 @@ let firstNum = '';
                         }
                     } 
                   else if (key.id == 'add' || key.id == 'subtract' || key.id == 'multiply' || key.id == 'divide') {
-                        if (firstNum === '') {
+                        if (firstNum === '' && operation === null) {
                             operation = key.id;
                             firstNum = parseFloat(botDisplay.textContent);
                             topDisplay.textContent = `${firstNum}`;
@@ -46,6 +68,7 @@ let firstNum = '';
                             } 
                             else if (secondNum === '') {
                                 secondNum = parseFloat(calculate(displayNum, firstNum, operation));
+                                secondNum = parseFloat(secondNum.toFixed(5));
                                 topDisplay.textContent = `${secondNum}`;
                                 botDisplay.textContent = 0;
                                 operation = key.id;
@@ -53,12 +76,16 @@ let firstNum = '';
                                 else {
                                 firstNum = parseFloat(botDisplay.textContent);
                                 secondNum = parseFloat(calculate(firstNum, secondNum, operation));
+                                secondNum = parseFloat(secondNum.toFixed(5));
                                 topDisplay.textContent = `${secondNum}`;
                                 botDisplay.textContent = 0;
                                 operation = key.id;
                                 }
                     };
                     if (key.id === 'equals') {
+                        if (operation === null) {
+                            botDisplay.textContent = displayNum;
+                        } else {
                         firstNum = parseFloat(botDisplay.textContent);
                         secondNum = parseFloat(topDisplay.textContent);
                         result = calculate(firstNum, secondNum, operation);
@@ -66,6 +93,25 @@ let firstNum = '';
                         topDisplay.textContent = 0;
                         firstNum = '';
                         secondNum = `${result}`;
+                        operation = null;
+                        if (result === NaN || secondNum === NaN) {
+                            topDisplay.textContent = "Error";
+                            botDisplay.textContent = 0;
+                            firstNum = '';
+                            secondNum = '';
+                        }
+                        if (botDisplay.textContent.length >= 10) {
+                            const tempNum = `${result}`;
+                            const resultStr = tempNum.toString();
+                            result = Number(resultStr.slice(0, 10));
+                            result = parseFloat(result.toFixed(5));
+                            botDisplay.textContent = `${result}`;
+                            topDisplay.textContent = 0;
+                            firstNum = '';
+                            secondNum = `${result}`;
+                            operation = null;
+                        }
+                    }
                     }
                 }});
 });
@@ -83,6 +129,9 @@ let firstNum = '';
     }
 
     function divide (a,b) {
+        if (a === 0) {
+            return "DONT / 0";
+        }
         return parseFloat(b) / parseFloat(a);
     }
 

@@ -98,12 +98,12 @@ body {
 
 #equals {
     grid-column: -2;
-    grid-row: 2 / span 4;
+    grid-row: 3 / span 4;
     background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
     color: #f0f0f0;
 }
 
-#AC, #decimal, #multiply, #divide, #add, #subtract {
+#AC, #decimal, #multiply, #divide, #add, #subtract, #del {
     background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
     color: #f0f0f0;
     text-shadow: 0px 0px 1px #000;
