@@ -4,6 +4,8 @@ html {
     scroll-behavior: smooth;
     font-size: 150%;
     min-height: 100%;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
 }
 
 body {
