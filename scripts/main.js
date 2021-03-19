@@ -38,23 +38,24 @@ let firstNum = '';
                         }
                     } 
                   else if (key.id == 'add' || key.id == 'subtract' || key.id == 'multiply' || key.id == 'divide') {
-                        operation = key.id;
                         if (firstNum === '') {
+                            operation = key.id;
                             firstNum = parseFloat(botDisplay.textContent);
-                            console.log(firstNum);
-                            console.log(secondNum);
                             topDisplay.textContent = `${firstNum}`;
                             botDisplay.textContent = 0;
                             } 
                             else if (secondNum === '') {
                                 secondNum = parseFloat(calculate(displayNum, firstNum, operation));
-                                console.log(secondNum);
                                 topDisplay.textContent = `${secondNum}`;
                                 botDisplay.textContent = 0;
-                                console.log(operation);
+                                operation = key.id;
                                 } 
                                 else {
-                                    // wtf am i doing
+                                firstNum = parseFloat(botDisplay.textContent);
+                                secondNum = parseFloat(calculate(firstNum, secondNum, operation));
+                                topDisplay.textContent = `${secondNum}`;
+                                botDisplay.textContent = 0;
+                                operation = key.id;
                                 }
                     };
                     if (key.id === 'equals') {
@@ -63,6 +64,7 @@ let firstNum = '';
                         result = calculate(firstNum, secondNum, operation);
                         botDisplay.textContent = `${result}`;
                         topDisplay.textContent = 0;
+                        firstNum = '';
                     }
                 }});
 });
