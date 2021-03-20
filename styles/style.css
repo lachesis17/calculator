@@ -21,6 +21,7 @@ body {
     background: #C9CCD3;
     background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
     background-blend-mode: lighten;
+    flex-direction: column;
 }
 
 #container {
@@ -29,7 +30,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-bottom: 15%;
+    margin-bottom: 22%;
     text-align: center;
     border: 2px solid;
     background-color: rgb(219, 216, 216);
@@ -134,8 +135,55 @@ button:hover {
     transition: .4s ease-in-out;
 }
 
+#head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 1px 1px 2px darkgrey;
+    font-size: 70%;
+}
+
+h1 {
+    font-weight: bold;
+    text-shadow: 2px 2px 1px #f0f0f0;
+}
+
+p {
+    margin-top: -10%;
+    text-shadow: 1px 1px 2px grey;
+}
+
 @media screen and (max-width:500px) {
-    #container {
+    #container, #head {
         transform: scale(0.8);
+        margin-top: -5%;
     }
   }
+
+  @media screen and (max-width:500px) {
+    #head {
+       margin-bottom: -10%;
+    }
+  }
+
+  @media screen and (max-width:375px) {
+    #container {
+        transform: scale(0.5);
+        position: absolute;
+        top: 0;
+        margin-top: -15%;
+    }
+  }
+
+  @media screen and (max-width:375px) {
+    #head {
+       margin-bottom: -25%;
+       transform: scale(0.6);
+       position: absolute;
+       top: 0;
+    }
+  }
+
