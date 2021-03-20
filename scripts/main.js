@@ -73,6 +73,13 @@ let firstNum = '';
                                 topDisplay.textContent = `${secondNum}`;
                                 botDisplay.textContent = 0;
                                 operation = key.id;
+                                }
+                                else if (secondNum === '' || secondNum === 0 && operation === 'multiply') {
+                                    firstNum = parseFloat(botDisplay.textContent);
+                                    topDisplay.textContent = `${firstNum}`;
+                                    secondNum = topDisplay.textContent;
+                                    botDisplay.textContent = 0;
+                                    firstNum = '';
                                 } 
                                 else {
                                 firstNum = parseFloat(botDisplay.textContent);
