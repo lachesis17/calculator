@@ -252,12 +252,6 @@ h1 {
     }
   }
 
-  @media screen and (max-width:375px) {
-    #git {
-        margin-top: 16em;
-    }
-  }
-
   @media screen and (max-height:699px) and (max-width:800px) {
     #container {
         transform: scale(0.7);
@@ -291,5 +285,12 @@ h1 {
   @media screen and (max-height:575px) and (max-width:800px) {
     #git {
         transform: scale(0.8);
+        margin-top: 2.5em;
+    }
+  }
+
+  @media screen and (max-width:375px) {
+    #git {
+        margin-top: 16em;
     }
   }
