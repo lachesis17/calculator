@@ -258,37 +258,37 @@ h1 {
     }
   }
 
-  @media screen and (max-height:750px) {
+  @media screen and (max-height:699px) {
     #container {
         transform: scale(0.7);
-        margin-top: -10%;
-        margin-bottom: -8%;
+        margin-top: -12%;
+        margin-bottom: -11%;
     }
   }
 
-  @media screen and (max-height:750px) {
+  @media screen and (max-height:699px) {
     #head {
         transform: scale(0.85);
         margin-top: -2%;
     }
   }
 
-  @media screen and (max-height:625px) {
+  @media screen and (max-height:575px) {
     #container {
         transform: scale(0.5);
-        margin-top: -19%;
-        margin-bottom: -16.5%;
+        margin-top: -22%;
+        margin-bottom: -20%;
     }
   }
 
-  @media screen and (max-height:625px) {
+  @media screen and (max-height:575px) {
     #head {
         transform: scale(0.6);
         margin-top: -3%;
     }
   }
 
-  @media screen and (max-height:625px) {
+  @media screen and (max-height:575px) {
     #git {
         transform: scale(0.8);
     }
