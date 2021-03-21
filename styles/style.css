@@ -104,7 +104,7 @@ body {
     text-shadow: 1px 1px 1px #999;
     transition: .4s ease-in-out;
     transition: background 0.4s;
-    background: #616568 radial-gradient(circle, transparent 1%, #cecece 1%) center/15000%;
+    background: #798185 radial-gradient(circle, transparent 1%, #cecece 1%) center/15000%;
 }
 
 #AC:hover, #decimal:hover, #multiply:hover, #divide:hover, #add:hover, #subtract:hover, #del:hover, #equals:hover {
@@ -121,7 +121,7 @@ body {
 }
 
 #AC, #del {
-    background-color: #616568;
+    background-color: #798185;
     color: #b92828;
     text-shadow: 1px 1px 1px #000;
 }
@@ -134,7 +134,7 @@ body {
 #equals {
     grid-column: -2;
     grid-row: 3 / span 3;
-    background: #616568 radial-gradient(circle, transparent 1%, #cecece 1%)  center/31000%;
+    background: #798185 radial-gradient(circle, transparent 1%, #cecece 1%)  center/31000%;
 }
 
 .keys {
@@ -143,7 +143,7 @@ body {
     transition: .4s ease-in-out;
     background-position: center;
     transition: background 0.4s;
-    background: #d5d4d0 radial-gradient(circle, transparent 1%, #e9e9e7 1%) center/15000%;
+    background: #f0eee9 radial-gradient(circle, transparent 1%, #e9e9e7 1%) center/15000%;
 }
 
 .keys:hover {
