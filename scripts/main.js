@@ -39,8 +39,10 @@ let firstNum = '';
                                 botDisplay.textContent = 0;
                             }
                         }
-                        else if (botDisplay.textContent === "DONT / 0") {
+                        else if (botDisplay.textContent === "DONT ÷ 0") {
                                 botDisplay.textContent = 0;
+                                firstNum = '';
+                                secondNum = '';
                         }
                         else {
                             x = botDisplay.textContent.toString();
@@ -67,7 +69,7 @@ let firstNum = '';
                             topDisplay.textContent = `${firstNum}`;
                             botDisplay.textContent = 0;
                             } 
-                            else if (secondNum === '') {
+                            else if (secondNum === '') { 
                                 secondNum = parseFloat(calculate(displayNum, firstNum, operation));
                                 secondNum = parseFloat(secondNum.toFixed(5));
                                 topDisplay.textContent = `${secondNum}`;
@@ -80,7 +82,7 @@ let firstNum = '';
                                     secondNum = topDisplay.textContent;
                                     botDisplay.textContent = 0;
                                     firstNum = '';
-                                } 
+                                }
                                 else {
                                 firstNum = parseFloat(botDisplay.textContent);
                                 secondNum = parseFloat(calculate(firstNum, secondNum, operation));
@@ -140,7 +142,7 @@ let firstNum = '';
 
     function divide (a,b) {
         if (a === 0) {
-            return "DONT / 0";
+            return "DONT ÷ 0";
         }
         return parseFloat(b) / parseFloat(a);
     }
