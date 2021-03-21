@@ -127,8 +127,8 @@ body {
 }
 
 #AC:hover, #del:hover {
-    color: #222;
-    text-shadow: 1px 1px 1px #fff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #222;
 }
 
 #equals {
@@ -147,14 +147,14 @@ body {
 }
 
 .keys:hover {
-    background-color: #2e2f30;
+    background-color: #393a3b;
     color: #b92828;
     text-shadow: 0px 0px 1px #000;
     transition: .3s ease-in-out;
 }
 
 .keys:active {
-    background-color: #202122;
+    background-color: #393a3b;
     background-size: 400%;
     transition: background 0s;
 }
