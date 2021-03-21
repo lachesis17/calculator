@@ -102,8 +102,8 @@ body {
 #AC, #decimal, #multiply, #divide, #add, #subtract, #del, #equals {
     color: #222;
     text-shadow: 1px 1px 1px #999;
-    transition: .4s ease-in-out;
-    transition: background 0.4s;
+    transition: .2s ease-in-out;
+    transition: background 0.2s;
     background: #798185 radial-gradient(circle, transparent 1%, #cecece 1%) center/15000%;
 }
 
@@ -140,9 +140,9 @@ body {
 .keys {
     color: #222222;
     background-size: 100%;
-    transition: .4s ease-in-out;
+    transition: .2s ease-in-out;
     background-position: center;
-    transition: background 0.4s;
+    transition: background 0.2s;
     background: #f0eee9 radial-gradient(circle, transparent 1%, #e9e9e7 1%) center/15000%;
 }
 
