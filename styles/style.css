@@ -254,11 +254,11 @@ h1 {
 
   @media screen and (max-width:375px) {
     #git {
-        margin-top: 450px;
+        margin-top: 16em;
     }
   }
 
-  @media screen and (max-height:699px) {
+  @media screen and (max-height:699px) and (max-width:800px) {
     #container {
         transform: scale(0.7);
         margin-top: -12%;
@@ -266,29 +266,29 @@ h1 {
     }
   }
 
-  @media screen and (max-height:699px) {
+  @media screen and (max-height:699px) and (max-width:800px) {
     #head {
         transform: scale(0.85);
         margin-top: -2%;
     }
   }
 
-  @media screen and (max-height:575px) {
+  @media screen and (max-height:575px) and (max-width:800px) {
     #container {
         transform: scale(0.5);
-        margin-top: -22%;
-        margin-bottom: -20%;
+        margin-top: -24%;
+        margin-bottom: -25%;
     }
   }
 
-  @media screen and (max-height:575px) {
+  @media screen and (max-height:575px) and (max-width:800px) {
     #head {
         transform: scale(0.6);
-        margin-top: -3%;
+        margin-top: -4%;
     }
   }
 
-  @media screen and (max-height:575px) {
+  @media screen and (max-height:575px) and (max-width:800px) {
     #git {
         transform: scale(0.8);
     }
