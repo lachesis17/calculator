@@ -224,73 +224,25 @@ h1 {
 
   @media screen and (max-width:500px) {
     #head {
-       margin-bottom: -10%;
-    }
-  }
-
-  @media screen and (max-width:375px) {
-    #container {
-        transform: scale(0.65);
-        position: absolute;
-        top: 0;
-        margin-top: -8%;
-    }
-  }
-
-  @media screen and (max-width:375px) {
-    #head {
-       margin-bottom: -20%;
-       transform: scale(0.6);
-       position: absolute;
-       top: 0;
+       margin-bottom: -14%;
     }
   }
 
   @media screen and (max-width:500px) {
     #git {
-        margin-top: -8%;
+        margin-top: -50%;
     }
   }
 
-  @media screen and (max-height:699px) and (max-width:800px) {
+  @media screen and (max-width:380px) {
     #container {
-        transform: scale(0.7);
-        margin-top: -12%;
-        margin-bottom: -11%;
+        width: 300px;
+        min-width: 300px;
     }
   }
 
-  @media screen and (max-height:699px) and (max-width:800px) {
-    #head {
-        transform: scale(0.85);
-        margin-top: -2%;
-    }
-  }
-
-  @media screen and (max-height:575px) and (max-width:800px) {
-    #container {
-        transform: scale(0.5);
-        margin-top: -24%;
-        margin-bottom: -25%;
-    }
-  }
-
-  @media screen and (max-height:575px) and (max-width:800px) {
-    #head {
-        transform: scale(0.6);
-        margin-top: -4%;
-    }
-  }
-
-  @media screen and (max-height:575px) and (max-width:800px) {
-    #git {
-        transform: scale(0.8);
-        margin-top: 2.5em;
-    }
-  }
-
-  @media screen and (max-width:375px) {
-    #git {
-        margin-top: 16em;
+  @media screen and (max-width:380px) {
+    #equals {
+        background: #798185 radial-gradient(circle, transparent 1%, #cecece 1%)  center/35000%;
     }
   }
