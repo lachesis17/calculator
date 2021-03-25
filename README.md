@@ -1,5 +1,5 @@
 Calculator project for [Odin Project](www.theodinproject.com)
 
-Work in progress!
+Keyboard functionality coming soon!
 
 [Live preview](https://lachesis17.github.io/calculator/)
